@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  font-size: 13px;
+}
+h2 {
+  padding: 15px 0;
+}
+.app-container {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.calculate-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount-box {
+  background: #ccc;
+  padding: 26px 15px;
+  flex: 1;
+  margin: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.total-amount {
+  background-color: #dddee2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total-amount p {
+  color: #535457;
+}
+.total-amount input {
+  width: 70%;
+  border: none;
+  padding: 8px;
+  outline: none;
+
+  border: 1px solid rgb(240, 240, 240);
+  border-bottom: none;
+}
+.remaining-amount {
+  background-color: #d0ead7;
+}
+
+.remaining-amount.alert-danger {
+  background-color: #ead0d0;
+}
+.remaining-amount.alert-success {
+  background-color: #d0ead7;
+}
+.remaining-amount p {
+  color: #4c7158;
+}
+.spent-amount {
+  background-color: #c5e1ff;
+}
+.spent-amount p {
+  color: #33547e;
+}
+
+.expense-box {
+  width: 100%;
+}
+
+.expense-box input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+
+  border: 1px solid rgb(240, 240, 240);
+  border-bottom: none;
+}
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.expense-value {
+  display: flex;
+  align-items: center;
+  gap: 3px 10px;
+}
+
+.price {
+  background-color: #0c6af7;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 30px;
+}
+
+.icon {
+  color: #fff;
+  background: #000;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.form-input {
+  display: flex;
+  gap: 0 15px;
+}
+.form-input div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-input label {
+  font-size: 13px;
+}
+.form-input div input {
+  padding: 8px;
+  border: none;
+  border: 1px solid #ddd;
+  outline: none;
+  width: 300px;
+}
+
+.form button {
+  padding: 8px 12px;
+  margin-top: 15px;
+  background: #0c6af7;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #0c6af7;
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
