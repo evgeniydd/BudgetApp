@@ -23,6 +23,7 @@ function App() {
   const [name, setName] = useState('');
   const [cost, setCost] = useState('');
   const [searchItem, setSearchItem] = useState('');
+
   const onSubmit = (event) => {
     event.preventDefault();
 
@@ -32,7 +33,11 @@ function App() {
       cost: parseInt(cost),
     };
 
-    setExpenseItem([...expenseItem, expense]);
+    if (name && cost) {
+      setExpenseItem([...expenseItem, expense]);
+      setName('');
+      setCost('');
+    }
   };
 
   const deleteItem = (itemm) => {
@@ -82,7 +87,6 @@ function App() {
           <form className='form' onSubmit={onSubmit}>
             <div className='form-input'>
               <div>
-                <label htmlFor='name'>Name</label>
                 <input
                   autoComplete='off'
                   value={name}
@@ -90,22 +94,28 @@ function App() {
                   type='text'
                   name='itemName'
                   id='name'
+                  placeholder='Name'
+                  maxLength={21}
+                  minLength={2}
                 />
               </div>
 
               <div>
-                <label htmlFor='cost'>Cost</label>
                 <input
                   autoComplete='off'
                   value={cost}
-                  onChange={(event) => setCost(event.target.value)}
+                  onChange={(event) => setCost(event.target.value.replace(/\D/g, ''))}
                   type='text'
                   name='itemCost'
                   id='cost'
+                  placeholder='Cost'
+                  maxLength={5}
                 />
               </div>
             </div>
-            <button type='submit'>Save</button>
+            <button style={{ cursor: 'pointer' }} type='submit'>
+              Save
+            </button>
           </form>
         </div>
       </div>
