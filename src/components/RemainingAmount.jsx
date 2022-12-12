@@ -9,7 +9,7 @@ const RemainingAmount = (props) => {
   const alertType = totalExpenses > props.budget ? 'alert-danger' : 'alert-success';
   return (
     <div className={`amount-box remaining-amount ${alertType}`}>
-      <p>Remaining: {props.budget - totalExpenses}$</p>
+      <p>Remaining: ${props.budget - totalExpenses}</p>
     </div>
   );
 };

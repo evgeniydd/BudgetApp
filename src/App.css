@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&family=Noto+Sans:wght@400;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 p {
   font-size: 13px;
@@ -13,143 +15,151 @@ p {
 h2 {
   padding: 15px 0;
 }
-.app-container {
-  max-width: 1000px;
-  margin: auto;
-  padding-top: 20px;
-}
-
-.calculate-box {
-  display: flex;
-  justify-content: space-between;
-}
-
-.amount-box {
-  background: #ccc;
-  padding: 26px 15px;
-  flex: 1;
-  margin: 10px;
-  border-radius: 10px;
+.app-title {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.774);
+  font-size: 16px;
+  padding: 30px 0;
   font-weight: 600;
 }
+.main-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+.app-container {
+  margin: 0 10px;
+}
 
+body {
+  background-color: #3c8383;
+}
+.balance-title {
+  font-size: 16px;
+  color: #acacac;
+  font-weight: 400;
+}
+
+.total-wrap {
+  text-align: center;
+  margin: 30px 0;
+}
 .total-amount {
-  background-color: #dddee2;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .total-amount p {
-  color: #535457;
+  font-size: 30px;
+  padding: 10px 0;
+  font-weight: 600;
 }
+.total-amount .btn {
+  border: 0;
+  background: none;
+  outline: none;
+}
+.total-amount .icon {
+  color: rgba(0, 0, 0, 0.459);
+}
+
 .total-amount input {
-  width: 70%;
+  max-width: 80px;
+  padding: 10px 0;
+  font-size: 30px;
   border: none;
-  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
   outline: none;
+}
+.expenses-box {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
 
-  border: 1px solid rgb(240, 240, 240);
-  border-bottom: none;
-}
-.remaining-amount {
-  background-color: #d0ead7;
-}
-
-.remaining-amount.alert-danger {
-  background-color: #ead0d0;
-}
-.remaining-amount.alert-success {
-  background-color: #d0ead7;
-}
-.remaining-amount p {
-  color: #4c7158;
-}
-.spent-amount {
-  background-color: #c5e1ff;
-}
+.remaining-amount p,
 .spent-amount p {
-  color: #33547e;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.767);
 }
 
-.expense-box {
-  width: 100%;
+.expense-box h2 {
+  font-size: 16px;
+  color: #acacac;
+  font-weight: 400;
 }
-
 .expense-box input {
-  width: 100%;
   border: none;
-  padding: 10px;
   outline: none;
-
-  border: 1px solid rgb(240, 240, 240);
-  border-bottom: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 .expense-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 5px 10px;
 }
-
+.expense-item p {
+  font-size: 15px;
+}
 .expense-value {
   display: flex;
-  align-items: center;
-  gap: 3px 10px;
+  gap: 10px;
 }
 
 .price {
-  background-color: #0c6af7;
-  color: #fff;
-  padding: 3px 8px;
-  font-size: 11px;
-  border-radius: 30px;
+  color: rgb(201, 24, 77);
+  font-weight: normal;
 }
 
-.icon {
-  color: #fff;
-  background: #000;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  padding: 2px;
-  cursor: pointer;
+.expense-value .icon {
+  color: rgba(114, 114, 114, 0.425);
 }
-
+.expense-form {
+  text-align: center;
+}
+.expense-form h2 {
+  font-size: 18px;
+}
 .form-input {
   display: flex;
-  gap: 0 15px;
+  flex-direction: column;
 }
 .form-input div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  margin: auto;
+}
+.form-input input {
+  max-width: 200px;
+  padding: 6px;
+  margin: 6px 0;
+  border: 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  outline: none;
 }
 .form-input label {
-  font-size: 13px;
-}
-.form-input div input {
-  padding: 8px;
-  border: none;
-  border: 1px solid #ddd;
-  outline: none;
-  width: 300px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.514);
 }
 
 .form button {
-  padding: 8px 12px;
-  margin-top: 15px;
-  background: #0c6af7;
+  background-color: #3c8383;
   color: #fff;
   border: 0;
+  padding: 6px 12px;
   border-radius: 5px;
-  cursor: pointer;
+  margin: 10px 0;
 }
 
-.btn {
-  background-color: #0c6af7;
-  border: none;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 5px;
-  cursor: pointer;
+.items-box {
+  max-height: 150px;
+  overflow-y: scroll;
 }

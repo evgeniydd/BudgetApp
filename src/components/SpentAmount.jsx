@@ -7,7 +7,7 @@ const SpentAmount = (props) => {
   }, 0);
   return (
     <div className='amount-box spent-amount'>
-      <p>Spent so far: {totalExpenses}</p>
+      <p>Spent so far: ${totalExpenses}</p>
     </div>
   );
 };

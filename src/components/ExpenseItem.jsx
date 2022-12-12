@@ -7,7 +7,7 @@ const ExpenseItem = (props) => {
     <div className='expense-item'>
       <p>{props.name}</p>
       <div className='expense-value'>
-        <div className='price'>{props.cost}$</div>
+        <div className='price'> -{props.cost}$</div>
         <div onClick={props.deletedItem}>
           <FontAwesomeIcon className='icon' icon={faXmark} />
         </div>
